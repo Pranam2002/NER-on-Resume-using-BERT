@@ -39,6 +39,12 @@ BERT uses a method of masked language modeling to keep the word in focus from "s
 
 BERT is also the first NLP technique to rely solely on self-attention mechanism, which is made possible by the bidirectional Transformers at the center of BERT's design. This is significant because often, a word may change meaning as a sentence develops. Each word added augments the overall meaning of the word being focused on by the NLP algorithm. The more words that are present in total in each sentence or phrase, the more ambiguous the word in focus becomes. 
 
+### BERT Architecture
+We primarily report results on two model sizes: 
++ BERTBASE (L=12, H=768, A=12, Total Parameters=110M) 
++ BERTLARGE (L=24, H=1024, A=16, Total Parameters=340M).
+
+
 ### What is BERT used for?
 BERT is currently being used at Google to optimize the interpretation of user search queries. BERT excels at several functions that make this possible, including:  
 
@@ -121,6 +127,17 @@ How to fix the vanishing gradient problem? The main problem is that it’s too d
 Advantages: LSTMs can capture long-term dependencies and handle sequential data well.
 
 Disadvantages: LSTMs can be computationally expensive and require a large amount of training data.
+
+### Amazing facts:
+
++ How long does it take to pre-train BERT? The 2 original BERT models were trained on 4(BERTbase) and 16(BERTlarge) Cloud TPUs for 4 days.
+
++ Google has been using your reCAPTCHA selections to label training data since 2011. The entire Google Books archive and 13 million articles from the New York Times catalog have been transcribed/digitized via people entering reCAPTCHA text. Now, reCAPTCHA is asking us to label Google Street View images, vehicles, stoplights, airplanes, etc.
+
++ How long does it take to fine-tune BERT?
+
+For common NLP tasks discussed above, BERT takes between 1-25mins on a single Cloud TPU or between 1-130mins on a single GPU.
+
 
 ### References:
 https://www.techtarget.com/searchenterpriseai/definition/BERT-language-model#:~:text=BERT%2C%20which%20stands%20for%20Bidirectional,calculated%20based%20upon%20their%20connection.
